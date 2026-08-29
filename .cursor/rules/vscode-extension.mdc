@@ -1,0 +1,12 @@
+---
+description: VS Code extension + Cursor/Open VSX constraints.
+alwaysApply: true
+---
+
+# Extension rules
+
+- TypeScript. `vscode` API. Lazy `activationEvents`.
+- Cursor installs from Open VSX. Package for that.
+- Tokens in SecretStorage, never in `contributes.configuration` defaults.
+- Same publisher.extension ID if dual-publishing.
+- Do not assume Microsoft Marketplace availability equals Cursor availability.

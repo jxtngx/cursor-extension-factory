@@ -1,0 +1,12 @@
+---
+description: Factory contract. Agents implement the spec after init. Not a lab.
+alwaysApply: true
+---
+
+# Factory
+
+This is a **factory**. After `@init-extension` and spec approval, engineers implement.
+They implement the spec, not a surprise architecture.
+Do not emit a Cursor plugin (`.cursor-plugin`).
+Do not publish before Open VSX is in the plan.
+If TEAM.md lists an agent as parked, do not assign it tickets.
