@@ -35,11 +35,21 @@ When does it activate?
 
 Prefer lazy activation.
 
-### Q4 — Contributions
+### Q4 — Rust crate (required)
+
+This factory is TS + Rust like Ruff. Ask:
+
+- Crate name(s) under `crates/`
+- What the binary **does** (lint, format, analyze, …) — this is the product
+- Interface: argv/stdin JSON (CLI) vs LSP methods (if sidecar is lsp)
+- Target triples to **bundle** in the VSIX (name them; default: current desktop + document others)
+- Non-goal: reimplementing that logic in TypeScript
+
+### Q5 — Contributions
 
 List `contributes` keys they actually need (commands, configuration, views, languages, themes, debuggers, notebooks, menus). Non-goals: at least three contribution points they will **not** add.
 
-### Q5 — Cursor coexistence
+### Q6 — Cursor coexistence
 
 ```
 Does this inject completions, inline chat, or keybindings that can fight Cursor's AI?
@@ -47,7 +57,7 @@ Does this inject completions, inline chat, or keybindings that can fight Cursor'
 - Yes — document disable/conflict behavior
 ```
 
-### Q6 — Secrets and network
+### Q7 — Secrets and network
 
 ```
 - None
@@ -55,7 +65,7 @@ Does this inject completions, inline chat, or keybindings that can fight Cursor'
 - Talks to a cloud API (name it; tokens in SecretStorage, not settings)
 ```
 
-### Q7 — Test matrix
+### Q8 — Test matrix
 
 ```
 Must pass in:
@@ -63,11 +73,11 @@ Must pass in:
 - VS Code desktop (required if dual-publish)
 ```
 
-### Q8 — Publish
+### Q9 — Publish
 
 Confirm Open VSX. If dual, same extension ID. Homepage must be a **real domain** if they want Cursor verification (GitHub README is not enough per Cursor help).
 
-### Q9 — Repo
+### Q10 — Repo
 
 - GitHub `owner/repo` for the generated product
 - Sprint plan filename `<slug>-sprint.plan.md`

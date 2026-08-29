@@ -16,11 +16,13 @@ updated: <ISO-8601>
 | product-manager | .cursor/agents/product-manager.md | spec / init |
 | chief-architect | .cursor/agents/chief-architect.md | module map, activation |
 | extension-sme | .cursor/agents/extension-sme.md | VS Code API, Open VSX, Cursor help |
+| rust-sme | .cursor/agents/rust-sme.md | cargo, sidecar protocol, target triples |
 | scrum-master | .cursor/agents/scrum-master.md | tickets |
-| extension-engineer | .cursor/agents/extension-engineer.md | TypeScript extension host |
-| platform-engineer | .cursor/agents/platform-engineer.md | vsce, ovsx, CI |
-| test-engineer | .cursor/agents/test-engineer.md | vscode-test |
-| reviewer | .cursor/agents/reviewer.md | API, secrets, conflicts |
+| extension-engineer | .cursor/agents/extension-engineer.md | TypeScript host |
+| rust-engineer | .cursor/agents/rust-engineer.md | crates/ binary |
+| platform-engineer | .cursor/agents/platform-engineer.md | cargo + vsce, ovsx, CI |
+| test-engineer | .cursor/agents/test-engineer.md | cargo test + vscode-test |
+| reviewer | .cursor/agents/reviewer.md | API, secrets, no TS-only core |
 | <track specialist> | .cursor/agents/<name>.md | per TRACK |
 
 ## Parked

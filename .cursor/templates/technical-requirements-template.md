@@ -8,7 +8,10 @@ Fill during `@init-extension`. No implementation in this file.
 - publisher.extension:
 - One sentence:
 - TRACK:
+- Sidecar: cli | lsp
 - Publish: openvsx | dual
+- crates/:
+- Binary contract:
 
 ## Users
 

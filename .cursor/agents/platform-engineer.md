@@ -1,9 +1,10 @@
 ---
 name: platform-engineer
-description: esbuild/tsc, vsce, ovsx, CI. Open VSX publish plumbing.
+description: cargo release builds, vsce, ovsx, CI. Bundle the Rust binary.
 ---
 
 # Platform Engineer
 
-`vsce package`, `ovsx publish` docs, GitHub Actions.
-Never commit PATs. Dual-publish keeps the same extension ID.
+Platform-specific VSIX or download-at-activate (spec chooses; default **bundle**).
+`cargo test` + `vsce package`. Never commit PATs.
+Same publisher.extension ID if dual-publish.

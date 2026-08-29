@@ -28,11 +28,11 @@ Open this repo in Cursor and run:
 That command:
 
 1. Asks **what kind of extension** (one product, one kind)
-2. Asks **Cursor-first (Open VSX) vs dual-publish** (Open VSX + VS Marketplace)
-3. Walks a **requirements interview** (same shape as the other factories)
-4. Writes `.cursor/plans/project-init/<name>-technical-requirements.plan.md`
-5. Writes `TRACK.md` and **rewrites `.cursor/TEAM.md`** so the agent roster matches the kind
-6. Hands off to `@chief-architect` → `@extension-sme` → `@scrum-master` → tickets
+2. Asks **CLI sidecar vs stdio LSP** (both still TS host + Rust binary)
+3. Asks **Cursor-first (Open VSX) vs dual-publish**
+4. Walks a **requirements interview**
+5. Writes the spec, `TRACK.md`, and **rewrites `.cursor/TEAM.md`**
+6. Hands off to `@chief-architect` → `@extension-sme` → `@rust-sme` → `@scrum-master`
 
 Do not ask an engineer to `yo code` before the spec exists.
 
@@ -53,18 +53,27 @@ Do not emit a `.cursor-plugin` tree from this factory.
 
 ## Opinionated stack (not optional)
 
+**TypeScript + Rust, Ruff-shaped.** Not TS-only. Not Rust-only `activate()`.
+
 | Layer | Choice |
 | --- | --- |
-| Language | TypeScript |
-| API | `vscode` module, `@types/vscode` |
-| Build | `esbuild` (or `tsc` if the spec forbids bundling) |
-| Test | `@vscode/test-electron` / `@vscode/test-cli` |
+| Editor host | TypeScript `vscode` API (`editors/code/`) |
+| Product logic | Rust crate(s) (`crates/`) — CLI and/or stdio LSP, like [Ruff](https://docs.astral.sh/ruff/) |
+| Ship | Native binary **bundled** per platform (or a documented GitHub-release download). Same idea as Ruff / rust-analyzer |
+| Build TS | `esbuild` (or `tsc` if the spec forbids bundling) |
+| Build Rust | `cargo`, stable, documented target triples |
+| Test | `@vscode/test-electron` + `cargo test` |
 | Package | `@vscode/vsce` |
 | Publish (Cursor) | `ovsx` → [Open VSX](https://open-vsx.org) |
-| Host | Cursor (VS Code fork). Test in Cursor, not only Code |
 
-You may add LSP/DAP libraries the spec names.
-You may not ship a Microsoft Marketplace-only product and call it done for Cursor.
+You may not:
+
+- Implement the real work in TypeScript “for now”
+- Skip the Rust crate because the first command is a UI stub
+- Call the VS Code API from Rust (no supported extension-host bindings)
+- Ship Microsoft Marketplace only
+
+Sidecar talk: subprocess (Ruff-classic CLI) or stdio LSP (`ruff server` / rust-analyzer). WASM is a later milestone in the spec, not the default.
 
 ---
 
@@ -83,7 +92,7 @@ You may not ship a Microsoft Marketplace-only product and call it done for Curso
 | `ai-tool` | ai-extension-engineer | theme, dap |
 | `tree-scm` | tree-engineer | theme, dap |
 
-Core (always on): Product Manager, Chief Architect, Extension SME, Scrum Master, Extension Engineer, Platform Engineer, Test Engineer, Reviewer.
+Core (always on): Product Manager, Chief Architect, Extension SME, **Rust SME**, Scrum Master, Extension Engineer (TS), **Rust Engineer**, Platform Engineer, Test Engineer, Reviewer.
 
 Roster file: `.cursor/TEAM.md` (generated). Agents not listed **stay silent** unless the spec adds them later.
 
@@ -124,20 +133,15 @@ Official authoring API remains [VS Code Extension API](https://code.visualstudio
 ```
 .cursor/
   commands/     init-extension, launch-product-discovery, run-ticket-plan, review-extension, publish-openvsx
-  agents/       core + track specialists
+  agents/       core (incl. rust-engineer) + track specialists
   templates/    requirements, team roster
   plans/project-init/
+crates/         walking-skeleton notes for the Rust binary (after spec)
+editors/        notes for the TS host (after spec) — see templates/<kind>/
 templates/
-  commands-ui/  walking-skeleton notes (after spec)
-  language/
-  debugger/
-  formatter/
-  theme/
-  notebook/
-  ai-tool/
-  tree-scm/
-TRACK.md        written at init
-.cursor/TEAM.md written at init (who is on)
+  commands-ui/ …
+TRACK.md
+.cursor/TEAM.md
 ```
 
 ---

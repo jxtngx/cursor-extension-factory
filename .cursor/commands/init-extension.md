@@ -43,7 +43,21 @@ questions:
         label: Tree view / SCM
 ```
 
-Then ask publish target (do not continue discovery yet):
+Then ask how the Rust binary is spoken to (Ruff lock-in; not optional):
+
+```
+title: Extension Factory — Rust sidecar
+questions:
+  - id: sidecar
+    prompt: TypeScript hosts; Rust does the work (like Ruff). How does TS talk to the binary?
+    options:
+      - id: cli
+        label: Subprocess CLI (Ruff-classic — spawn, argv/stdin, parse stdout)
+      - id: lsp
+        label: stdio language server (ruff server / rust-analyzer)
+```
+
+Then ask publish target:
 
 ```
 title: Extension Factory — Publish
@@ -57,16 +71,18 @@ questions:
         label: Dual — Open VSX + Visual Studio Marketplace (same publisher.extension ID)
 ```
 
-Write `TRACK.md` as the kind id only (one line) after they answer.
+Write `TRACK.md` as `<kind>` only (one line). Record `sidecar` and `publish` in the spec, not in TRACK.
+
+If they want TS-only or Rust-only `activate()`, refuse: this factory is **TS host + Rust crate**.
 If they say "plugin plus extension," refuse: this factory emits **one** VS Code extension.
 
-Store `kind` and `publish` in session memory.
+Store `kind`, `sidecar`, and `publish` in session memory.
 
 ## 0b. Update the agent team (required)
 
 Overwrite `.cursor/TEAM.md` from [team-template.md](../templates/team-template.md).
 
-**Always on:** product-manager, chief-architect, extension-sme, scrum-master, extension-engineer, platform-engineer, test-engineer, reviewer.
+**Always on:** product-manager, chief-architect, extension-sme, rust-sme, scrum-master, extension-engineer, rust-engineer, platform-engineer, test-engineer, reviewer.
 
 **Add by kind** (set status `on`; everyone else `parked`):
 
@@ -94,7 +110,7 @@ Follow [launch-product-discovery.md](launch-product-discovery.md) with this kind
 2. `.cursor/plans/project-init/<slug>-extension.plan.md`
 3. `TRACK.md` (kind)
 4. `.cursor/TEAM.md` (roster)
-5. Point engineers at `templates/<kind>/` — do not copy a walking skeleton until the spec is approved
+5. Point engineers at `templates/<kind>/` and `crates/README.md` — do not copy a walking skeleton until the spec is approved
 
 ## 3. Review
 
@@ -113,8 +129,8 @@ Team: .cursor/TEAM.md
 Requirements: .cursor/plans/project-init/[slug]-technical-requirements.plan.md
 Extension spec: .cursor/plans/project-init/[slug]-extension.plan.md
 
-Validate VS Code API + Open VSX fit.
-Then @extension-sme.
+Validate VS Code API + Open VSX + the Rust crate (CLI or LSP).
+Then @extension-sme and @rust-sme.
 Then @scrum-master for the first sprint.
 Only @ agents whose TEAM status is on.
 ```
@@ -122,7 +138,10 @@ Only @ agents whose TEAM status is on.
 ## MUST NOT
 
 - Scaffold `yo code` or write `package.json` contributes before approval
+- A TypeScript-only core
+- Calling `vscode` from Rust
 - Emit `.cursor-plugin/`
 - Publish to Microsoft Marketplace only
 - Invent a publisher ID or PAT
 - Pretend this is a lab
+

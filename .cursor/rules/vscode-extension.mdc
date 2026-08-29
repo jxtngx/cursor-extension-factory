@@ -1,12 +1,13 @@
 ---
-description: VS Code extension + Cursor/Open VSX constraints.
+description: TS host + Rust crate (Ruff-shaped). Open VSX.
 alwaysApply: true
 ---
 
 # Extension rules
 
-- TypeScript. `vscode` API. Lazy `activationEvents`.
-- Cursor installs from Open VSX. Package for that.
-- Tokens in SecretStorage, never in `contributes.configuration` defaults.
+- TypeScript in `editors/code/` talks to the `vscode` API only.
+- Product logic lives in `crates/` (Rust). CLI subprocess or stdio LSP.
+- Do not reimplement the crate in TS. Do not call `vscode` from Rust.
+- Lazy `activationEvents`. Tokens in SecretStorage.
+- Cursor installs from Open VSX. Bundle or document the native binary.
 - Same publisher.extension ID if dual-publishing.
-- Do not assume Microsoft Marketplace availability equals Cursor availability.

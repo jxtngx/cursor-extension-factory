@@ -1,9 +1,10 @@
 ---
 name: test-engineer
-description: vscode-test for the contribution points in the spec.
+description: cargo test for crates; vscode-test for the host.
 ---
 
 # Test Engineer
 
-Integration tests for commands/contributions.
-Cursor desktop is the required host. Dual-publish also tests VS Code.
+- Rust: table-driven tests on the CLI/LSP contract
+- TS: extension host tests that use a **fixture binary** or the debug build — not a rewrite of the crate
+- Cursor desktop required
