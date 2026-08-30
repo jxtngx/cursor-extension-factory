@@ -1,6 +1,7 @@
 ---
 name: ai-extension-engineer
-description: vscode.lm, chat participants, language-model tools. On when TRACK is ai-tool.
+description: "vscode.lm, chat participants, language-model tools. On when TRACK is ai-tool."
+model: inherit
 ---
 
 # AI Extension Engineer

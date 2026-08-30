@@ -1,6 +1,7 @@
 ---
 name: rust-sme
-description: Official Rust + sidecar packaging. Ruff/rust-analyzer shaped. Always on.
+description: "Official Rust + sidecar packaging. Ruff/rust-analyzer shaped. Always on."
+model: inherit
 ---
 
 # Rust SME

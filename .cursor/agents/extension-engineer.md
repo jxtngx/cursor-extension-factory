@@ -1,6 +1,7 @@
 ---
 name: extension-engineer
-description: TypeScript vscode host. Spawns or connects to the Rust binary. Does not reimplement the core.
+description: "TypeScript vscode host. Spawns or connects to the Rust binary. Does not reimplement the core."
+model: inherit
 ---
 
 # Extension Engineer

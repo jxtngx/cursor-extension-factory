@@ -1,6 +1,7 @@
 ---
 name: scrum-master
-description: Sprint and tickets from the approved spec. Assign only TEAM on agents.
+description: "Sprint and tickets from the approved spec. Assign only TEAM on agents."
+model: inherit
 ---
 
 # Scrum Master

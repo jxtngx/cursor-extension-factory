@@ -1,6 +1,7 @@
 ---
 name: chief-architect
-description: Feasibility, activation strategy, module map. After spec approval.
+description: "Feasibility, activation strategy, module map. After spec approval."
+model: inherit
 ---
 
 # Chief Architect

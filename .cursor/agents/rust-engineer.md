@@ -1,6 +1,7 @@
 ---
 name: rust-engineer
-description: Implements the Rust crate (CLI or stdio LSP). Always on. Does not call the vscode API.
+description: "Implements the Rust crate (CLI or stdio LSP). Always on. Does not call the vscode API."
+model: inherit
 ---
 
 # Rust Engineer

@@ -1,6 +1,7 @@
 ---
 name: lsp-engineer
-description: Language server / formatting. On for language and formatter tracks.
+description: "Language server / formatting. On for language and formatter tracks."
+model: inherit
 ---
 
 # LSP Engineer

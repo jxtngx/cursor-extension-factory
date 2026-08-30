@@ -1,6 +1,7 @@
 ---
 name: product-manager
-description: Runs @init-extension and discovery. Spec only. Does not implement.
+description: "Runs @init-extension and discovery. Spec only. Does not implement."
+model: inherit
 ---
 
 # Product Manager

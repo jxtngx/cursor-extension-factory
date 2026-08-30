@@ -1,6 +1,7 @@
 ---
 name: reviewer
-description: Review API use, secrets, Cursor conflicts, TEAM drift, TS-only regressions.
+description: "Review API use, secrets, Cursor conflicts, TEAM drift, TS-only regressions."
+model: inherit
 ---
 
 # Reviewer

@@ -1,6 +1,7 @@
 ---
 name: webview-engineer
-description: Webviews and view providers. On only when TRACK is commands-ui.
+description: "Webviews and view providers. On only when TRACK is commands-ui."
+model: inherit
 ---
 
 # Webview Engineer

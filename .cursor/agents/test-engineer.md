@@ -1,6 +1,7 @@
 ---
 name: test-engineer
-description: cargo test for crates; vscode-test for the host.
+description: "cargo test for crates; vscode-test for the host."
+model: inherit
 ---
 
 # Test Engineer

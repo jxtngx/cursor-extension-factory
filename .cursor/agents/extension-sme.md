@@ -1,6 +1,7 @@
 ---
 name: extension-sme
-description: VS Code API, Open VSX, Cursor extension help. Official docs over blogs.
+description: "VS Code API, Open VSX, Cursor extension help. Official docs over blogs."
+model: inherit
 ---
 
 # Extension SME

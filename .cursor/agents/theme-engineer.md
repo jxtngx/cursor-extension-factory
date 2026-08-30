@@ -1,6 +1,7 @@
 ---
 name: theme-engineer
-description: Color / icon themes. On when TRACK is theme.
+description: "Color / icon themes. On when TRACK is theme."
+model: inherit
 ---
 
 # Theme Engineer

@@ -1,6 +1,7 @@
 ---
 name: platform-engineer
-description: cargo release builds, vsce, ovsx, CI. Bundle the Rust binary.
+description: "cargo release builds, vsce, ovsx, CI. Bundle the Rust binary."
+model: inherit
 ---
 
 # Platform Engineer
