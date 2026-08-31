@@ -11,7 +11,7 @@ This factory targets that path. It is **not** a Cursor **plugin** factory (rules
 > **Lab** = student writes the code. Mentors quiz and review.
 > **Factory** = you define requirements. Chief Architect, SME, Scrum, and engineers ship tickets.
 
-Sister factories: [cursor-agent-factory](https://github.com/jxtngx/cursor-agent-factory) · [cursor-fullstack-factory](https://github.com/jxtngx/cursor-fullstack-factory) · [cursor-swift-factory](https://github.com/jxtngx/cursor-swift-factory) · [cursor-deep-learning-factory](https://github.com/jxtngx/cursor-deep-learning-factory).
+Sister factories: [cursor-langchain-factory](https://github.com/jxtngx/cursor-langchain-factory) · [cursor-fullstack-factory](https://github.com/jxtngx/cursor-fullstack-factory) · [cursor-swift-factory](https://github.com/jxtngx/cursor-swift-factory) · [cursor-deep-learning-factory](https://github.com/jxtngx/cursor-deep-learning-factory).
 
 If you wanted to *learn* the VS Code API by typing every contribution yourself, that would be a lab. This is not that.
 
@@ -152,7 +152,7 @@ TRACK.md
 | --- | --- |
 | [cursor-tws-plugin](https://github.com/jxtngx/cursor-tws-plugin) | Product — Cursor **plugin**, not this factory |
 | [cursor-swift-factory](https://github.com/jxtngx/cursor-swift-factory) | Factory — Swift apps |
-| [cursor-agent-factory](https://github.com/jxtngx/cursor-agent-factory) | Factory — LangChain |
+| [cursor-langchain-factory](https://github.com/jxtngx/cursor-langchain-factory) | Factory — LangChain |
 | [cursor-fullstack-factory](https://github.com/jxtngx/cursor-fullstack-factory) | Factory — fullstack |
 | [cursor-rust-lab](https://github.com/jxtngx/cursor-rust-lab) | Lab |
 
