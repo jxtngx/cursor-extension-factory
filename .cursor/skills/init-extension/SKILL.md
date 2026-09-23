@@ -1,3 +1,9 @@
+---
+name: init-extension
+description: Init Extension (factory)
+disable-model-invocation: true
+---
+
 # Init Extension (factory)
 
 Start a **new VS Code-compatible Cursor extension** from this factory.

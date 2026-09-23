@@ -1,3 +1,9 @@
+---
+name: launch-product-discovery
+description: Launch Product Discovery (extension factory)
+disable-model-invocation: true
+---
+
 # Launch Product Discovery (extension factory)
 
 Same *shape* as the other factories: questionnaire → technical requirements → architect → scrum.

@@ -1,6 +1,12 @@
 ---
 name: publish-openvsx
 description: Walk Open VSX publish after tests. Do not invent PATs.
+disable-model-invocation: true
+---
+
+---
+name: publish-openvsx
+description: Walk Open VSX publish after tests. Do not invent PATs.
 ---
 
 # Publish Open VSX

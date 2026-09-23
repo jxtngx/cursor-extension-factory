@@ -1,6 +1,12 @@
 ---
 name: review-extension
 description: Review the extension diff against the spec, VS Code API, and Cursor/Open VSX constraints.
+disable-model-invocation: true
+---
+
+---
+name: review-extension
+description: Review the extension diff against the spec, VS Code API, and Cursor/Open VSX constraints.
 ---
 
 # Review extension
