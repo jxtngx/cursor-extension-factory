@@ -1,6 +1,6 @@
 # Cursor Extension Factory
 
-A **factory**, not a lab.
+A **factory**.
 
 This repo is boilerplate for a **VS Code-compatible extension** that runs in [Cursor](https://cursor.com).
 Cursor's team implements from a spec you write in the first session.
@@ -8,12 +8,9 @@ Cursor's team implements from a spec you write in the first session.
 Cursor loads third-party extensions from **[Open VSX](https://open-vsx.org)** (see [Cursor: Extensions](https://cursor.com/help/customization/extensions)).
 This factory targets that path. It is **not** a Cursor **plugin** factory (rules/skills/`.cursor-plugin`). For plugins, see [cursor-tws-plugin](https://github.com/jxtngx/cursor-tws-plugin) as an example product, not this boilerplate.
 
-> **Lab** = student writes the code. Mentors quiz and review.
-> **Factory** = you define requirements. Chief Architect, SME, Scrum, and engineers ship tickets.
+You define requirements. Chief Architect, SME, Scrum, and engineers ship tickets.
 
 Sister factories: [cursor-langchain-factory](https://github.com/jxtngx/cursor-langchain-factory) · [cursor-fullstack-factory](https://github.com/jxtngx/cursor-fullstack-factory) · [cursor-swift-factory](https://github.com/jxtngx/cursor-swift-factory) · [cursor-deep-learning-factory](https://github.com/jxtngx/cursor-deep-learning-factory).
-
-If you wanted to *learn* the VS Code API by typing every contribution yourself, that would be a lab. This is not that.
 
 ---
 
@@ -154,7 +151,6 @@ TRACK.md
 | [cursor-swift-factory](https://github.com/jxtngx/cursor-swift-factory) | Factory — Swift apps |
 | [cursor-langchain-factory](https://github.com/jxtngx/cursor-langchain-factory) | Factory — LangChain |
 | [cursor-fullstack-factory](https://github.com/jxtngx/cursor-fullstack-factory) | Factory — fullstack |
-| [cursor-rust-lab](https://github.com/jxtngx/cursor-rust-lab) | Lab |
 
 ---
 

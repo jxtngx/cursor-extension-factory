@@ -1,5 +1,5 @@
 ---
-description: Factory contract. Agents implement the spec after init. Not a lab.
+description: Factory contract. Agents implement the spec after init.
 alwaysApply: true
 ---
 

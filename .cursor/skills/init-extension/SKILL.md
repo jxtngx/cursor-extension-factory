@@ -149,5 +149,5 @@ Only @ agents whose TEAM status is on.
 - Emit `.cursor-plugin/`
 - Publish to Microsoft Marketplace only
 - Invent a publisher ID or PAT
-- Pretend this is a lab
+- Send the user to write the extension themselves
 

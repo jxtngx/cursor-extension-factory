@@ -1,6 +1,6 @@
 # AGENTS
 
-This is a **factory**, not a lab.
+This is a **factory**.
 
 - `@init-extension` first. Kind + **TS host / Rust crate** (Ruff-shaped) + Open VSX.
 - Rewrite `.cursor/TEAM.md`. Parked agents do not work.
